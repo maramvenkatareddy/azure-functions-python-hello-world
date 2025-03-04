@@ -10,4 +10,4 @@ def MyFunction(req: func.HttpRequest) -> func.HttpResponse:
     name = "helloworld !!"
     html_content = f"<html><body><h1 style='color:red;'>{name}</h1></body></html>"
 
-    return func.HttpResponse(f"{name}", status_code=200)
+     return func.HttpResponse(html_content, status_code=200, mimetype="text/html")
