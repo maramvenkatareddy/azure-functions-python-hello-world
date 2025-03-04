@@ -2,12 +2,12 @@ import azure.functions as func
 import datetime
 import json
 import logging
-name = "helloworld !!"
 app = func.FunctionApp()
 
 @app.route(route="MyFunction", auth_level=func.AuthLevel.ANONYMOUS)
 def MyFunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
+    name = helloworld !!
 
     name = req.params.get('name')
     if not name:
@@ -29,7 +29,7 @@ def MyFunction(req: func.HttpRequest) -> func.HttpResponse:
 @app.route(route="MyFunctionApp", auth_level=func.AuthLevel.ANONYMOUS)
 def MyFunctionApp(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-
+    name = "helloworld !!"
     name = req.params.get('name')
     if not name:
         try:
