@@ -37,10 +37,10 @@ def venkat(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(html_content, status_code=200, mimetype="text/html")
 
 @app.route(route="functionapp", auth_level=func.AuthLevel.ANONYMOUS, methods=["GET"])
-def venkat(req: func.HttpRequest) -> func.HttpResponse:
+def functionapp(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
-    name = "Hello World !! from Function app"
+    name = "Hello World!! from Function app"
 
     # List of Colors 🔥
     colors = ["red", "green", "blue", "orange", "purple", "yellow", "pink"]
