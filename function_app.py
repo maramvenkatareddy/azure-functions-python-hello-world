@@ -35,3 +35,20 @@ def venkat(req: func.HttpRequest) -> func.HttpResponse:
     html_content = f"<html><body><h1 style='color:{random_color};'>{name}</h1></body></html>"
 
     return func.HttpResponse(html_content, status_code=200, mimetype="text/html")
+
+@app.route(route="functionapp", auth_level=func.AuthLevel.ANONYMOUS, methods=["GET"])
+def venkat(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info("Python HTTP trigger function processed a request.")
+
+    name = "Hello World !! from Function app"
+
+    # List of Colors 🔥
+    colors = ["red", "green", "blue", "orange", "purple", "yellow", "pink"]
+
+    # Pick Random Color
+    random_color = random.choice(colors)
+
+    html_content = f"<html><body><h1 style='color:{random_color};'>{name}</h1></body></html>"
+
+    return func.HttpResponse(html_content, status_code=200, mimetype="text/html")
+
