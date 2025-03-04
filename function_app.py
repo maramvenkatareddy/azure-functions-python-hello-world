@@ -7,7 +7,7 @@ app = func.FunctionApp()
 def MyFunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
-    name = "helloworld !!"
+    name = "Hello World !!"
     html_content = f"<html><body><h1 style='color:red;'>{name}</h1></body></html>"
 
     return func.HttpResponse(html_content, status_code=200, mimetype="text/html")
